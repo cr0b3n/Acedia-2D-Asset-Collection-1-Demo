@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235abed4eb3c36247ab61064dad0ac59, type: 3}
+  m_Name: Set 1 Sprite Group Appearance
+  m_EditorClassIdentifier: 
+  spriteGroups:
+  - sprites:
+    - {fileID: 21300000, guid: df4c069fa71e7c3478e7b6a2db0258cf, type: 3}
+    - {fileID: 21300002, guid: df4c069fa71e7c3478e7b6a2db0258cf, type: 3}
+  - sprites:
+    - {fileID: 21300000, guid: f5f668f47c7e39d4eb6c5cb6d66728e1, type: 3}
+    - {fileID: 21300002, guid: f5f668f47c7e39d4eb6c5cb6d66728e1, type: 3}
+  - sprites:
+    - {fileID: 21300000, guid: 64b1db436c0d07240b6e781bf88d8dab, type: 3}
+    - {fileID: 21300002, guid: 64b1db436c0d07240b6e781bf88d8dab, type: 3}
