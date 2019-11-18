@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Acedia 2D Asset Collection 1 Demo/Scenes/Demo Set 1-9-10.unity
+- path: Assets/Acedia 2D Asset Collection 1 Demo/Scenes/Demo Set 3-4-8.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
