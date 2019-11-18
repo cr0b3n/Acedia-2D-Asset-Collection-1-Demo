@@ -1,0 +1,529 @@
+fileFormatVersion: 2
+guid: 2d5273f255898bf4e8870beb6b6f29d8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8360621857648827146
+    second: Eye
+  - first:
+      213: -105911007907788231
+    second: char_1
+  - first:
+      213: -2554822408315757945
+    second: EyeAlt
+  - first:
+      213: -4484386481748707659
+    second: Head
+  - first:
+      213: -5703411853449480706
+    second: char_4
+  - first:
+      213: -3215313362485883606
+    second: Eyeball
+  - first:
+      213: -405539212965888768
+    second: MouthAlt
+  - first:
+      213: -7176917580659845818
+    second: Nose
+  - first:
+      213: -5043888605235722714
+    second: ArmUpper
+  - first:
+      213: -2058226634486451076
+    second: Mouth
+  - first:
+      213: -1818077472068935645
+    second: Body
+  - first:
+      213: -1953130723355980962
+    second: Ear
+  - first:
+      213: 7313778987236991310
+    second: ArmLower
+  - first:
+      213: 7313408716042973088
+    second: LegUpper
+  - first:
+      213: -3727999686058157814
+    second: Tail
+  - first:
+      213: 49096738397806095
+    second: Hand
+  - first:
+      213: 7920497663692262429
+    second: LeggLower
+  - first:
+      213: -3158504502928476419
+    second: FootNail
+  - first:
+      213: -8354755788499204436
+    second: Foot
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Eye
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 880
+        width: 158
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c53542f7e4451242b637cb6286f7bb4
+      internalID: -8360621857648827146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeAlt
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 888
+        width: 165
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.36551005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b08847ae67bebd4ab4d1a0b8186a50b
+      internalID: -2554822408315757945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Head
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 526
+        width: 477
+        height: 493
+      alignment: 9
+      pivot: {x: 0.5106791, y: 0.16592042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6444bfd311718143bb4ab11ec41004a
+      internalID: -4484386481748707659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eyeball
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 769
+        width: 88
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1673c11c676114cb06cf897c9eb3ca
+      internalID: -3215313362485883606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MouthAlt
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 660
+        width: 198
+        height: 157
+      alignment: 9
+      pivot: {x: 0.4143088, y: 0.66040814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e4c96f3f76c5049a0ce562492863a1
+      internalID: -405539212965888768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nose
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 615
+        width: 74
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bac57f0a9714c48871edf74c267e73
+      internalID: -7176917580659845818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmUpper
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 411
+        width: 85
+        height: 169
+      alignment: 9
+      pivot: {x: 0.4744137, y: 0.81125724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380fe2c269a726b43ace5871f9404995
+      internalID: -5043888605235722714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 411
+        width: 196
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420e63080cca1454a8787703a6a6998c
+      internalID: -2058226634486451076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Body
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 162
+        width: 206
+        height: 313
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144596965d23ca34981c71a6b493b844
+      internalID: -1818077472068935645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ear
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 260
+        width: 239
+        height: 215
+      alignment: 9
+      pivot: {x: 0.0061724675, y: 0.3794983}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ef68af937f07b4395eca19ba80c882
+      internalID: -1953130723355980962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmLower
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 207
+        width: 79
+        height: 157
+      alignment: 9
+      pivot: {x: 0.51835304, y: 0.87071085}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06643bcbe9239234d8419131d2409ee8
+      internalID: 7313778987236991310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LegUpper
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 201
+        width: 102
+        height: 166
+      alignment: 9
+      pivot: {x: 0.5168888, y: 0.7924564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6af11f2a20692e449279e106940bff8
+      internalID: 7313408716042973088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tail
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 14
+        width: 192
+        height: 202
+      alignment: 9
+      pivot: {x: 0.009602864, y: 0.38973504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4a6fceadbc1ef4fa30affb8b72025a
+      internalID: -3727999686058157814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hand
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 14
+        width: 145
+        height: 161
+      alignment: 9
+      pivot: {x: 0.4862396, y: 0.7975823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797ec29a1dee027409b61fbd7b3d47fc
+      internalID: 49096738397806095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeggLower
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 27
+        width: 67
+        height: 129
+      alignment: 9
+      pivot: {x: 0.5198533, y: 0.80408293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8b6ac425009c149b47aa9906810dee
+      internalID: 7920497663692262429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FootNail
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 39
+        width: 130
+        height: 82
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f398ab44e6ea0fb48abe300a68d34ff5
+      internalID: -3158504502928476419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foot
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 46
+        width: 145
+        height: 81
+      alignment: 9
+      pivot: {x: 0.8165279, y: 0.48357853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6510810329f121b449141be79941f7ee
+      internalID: -8354755788499204436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

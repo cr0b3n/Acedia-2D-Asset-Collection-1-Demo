@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730665f77a9d2f5408009b876a4d5524, type: 3}
+  m_Name: Set 4 BodyFace Sprite Appearance
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -7398706691987642047, guid: cd7f129d67863e54980b89911270e4ac, type: 3}
+  - {fileID: 21300000, guid: 6511ee819e318fa45b7472cf5ea41714, type: 3}
