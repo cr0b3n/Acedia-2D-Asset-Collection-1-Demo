@@ -13,6 +13,10 @@ public class DemoInput4D : MonoBehaviour {
     private bool readyToClear;                      //Bool used to keep input in sync
     [HideInInspector] public bool isActive;
     private void Update() {
+
+        if (!isActive)
+            return;
+
         //Clear out existing input values
         ClearInput();
 
@@ -50,7 +54,7 @@ public class DemoInput4D : MonoBehaviour {
 
         //Avoid attacking while pressing a button
         if (!EventSystem.current.IsPointerOverGameObject()) {
-            attackPressed = attackPressed || Input.GetKeyDown(KeyCode.Space);
+            attackPressed = attackPressed || Input.GetButtonDown("Fire1");
         }
     }
 }

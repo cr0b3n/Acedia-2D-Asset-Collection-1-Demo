@@ -7,7 +7,7 @@ public class Set8Animation : MonoBehaviour {
 
     public Animator animator;
     public DemoInput input;
-    public Rigidbody2D myRB;
+    public Rigidbody2D rigidBody;
     public Set8Movement movement;
 
     private int speedAnimID;
@@ -18,12 +18,7 @@ public class Set8Animation : MonoBehaviour {
     private int isDashingID;
     private int isDead;
 
-    private bool isActive;
-
     private void Start() {
-
-        isActive = true;
-
         //Set up animation int ID cause they are faster than strings
         speedAnimID = Animator.StringToHash("speed");
         isJumpingAnimID = Animator.StringToHash("isJumping");
@@ -37,14 +32,11 @@ public class Set8Animation : MonoBehaviour {
     private void Update() {
 
         animator.SetBool(attackAnimID, movement.isAttacking);
-
-        if (!isActive) return;
-
         animator.SetBool(isDashingID, movement.isDashing);
         animator.SetBool(isLandingAnimID, movement.isOnGround);
-        animator.SetFloat(yVelocityAnimID, myRB.velocity.y);        
+        animator.SetFloat(yVelocityAnimID, rigidBody.velocity.y);        
         animator.SetBool(isJumpingAnimID, movement.isJumping);
         
-        animator.SetFloat(speedAnimID, Mathf.Abs(input.horizontal));
+        animator.SetFloat(speedAnimID, Mathf.Abs(rigidBody.velocity.x));
     }
 }

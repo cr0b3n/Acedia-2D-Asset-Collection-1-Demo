@@ -180,7 +180,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.071118355, y: 1.9379513}
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  sortingGroup: {fileID: 8351622104604211413}
   maxPosition: {x: 4.78, y: 1.95}
   minPosition: {x: -6.42, y: -2.76}
 --- !u!114 &8907255051894353249

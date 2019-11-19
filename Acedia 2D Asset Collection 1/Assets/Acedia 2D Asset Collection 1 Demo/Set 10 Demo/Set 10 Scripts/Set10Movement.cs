@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D), typeof(DemoInput))]
-public class Set10Movement : MonoBehaviour {
+public class Set10Movement : MonoBehaviour, IActivatable {
     public bool drawDebugRaycasts = true;   //Should the environment checks be visualized
 
     [Header("Movement Properties")]
@@ -12,6 +13,7 @@ public class Set10Movement : MonoBehaviour {
     public float maxFallSpeed = -25f;       //Max speed player can fall
     public float dashTime = 0.15f;          //Time allowed for dashing
     public float dashForce = 50f;           //Force added when dashing
+    public SortingGroup sortingGroup;
 
     [Header("Jump Properties")]
     public float jumpForce = 6.3f;          //Initial force of jump
@@ -32,7 +34,6 @@ public class Set10Movement : MonoBehaviour {
 
     private DemoInput input;      //The current inputs for the player
     private Rigidbody2D rigidBody;                  //The rigidbody component
-
     private float jumpTime;                         //Variable to hold jump duration
     private bool hasDashEffect;
     private float stateTimeElapse;
@@ -42,16 +43,28 @@ public class Set10Movement : MonoBehaviour {
     private bool isFalling;
     private const float fallEffectRate = .5f;
     private float fallEffectTimer;
+    private int waterLayer;
+    private int defaultLayer;
+    private Vector3 originalPos;
 
     private void Start() {
         //Get a reference to the required components
         input = GetComponent<DemoInput>();
         rigidBody = GetComponent<Rigidbody2D>();
+        originalPos = new Vector3(transform.position.x, transform.position.y);
+        waterLayer = LayerMask.NameToLayer("Water");
+        defaultLayer = LayerMask.NameToLayer("Default");
 
+        gameObject.layer = waterLayer;
     }
 
     private void FixedUpdate() {
 
+        if (!input.isActive) {
+            ReturnToOriginalPosition();
+            return;
+        }
+            
         //Check the environment to determine status
         PhysicsCheck();
 
@@ -64,6 +77,26 @@ public class Set10Movement : MonoBehaviour {
     private void OnDrawGizmos() {
         Debug.DrawRay(transform.position + new Vector3(leftFootOffset, groundOffset), Vector2.down * groundDistance, Color.red);
         Debug.DrawRay(transform.position + new Vector3(rightFootOffset, groundOffset), Vector2.down * groundDistance, Color.blue);
+    }
+
+    private void ReturnToOriginalPosition() {
+
+        float remainingDistance = (transform.position - new Vector3(originalPos.x, transform.position.y)).sqrMagnitude;
+
+        if (remainingDistance <= .1f) {
+
+            if (rigidBody.velocity.y < -0.1) return;
+
+            rigidBody.velocity = Vector2.zero;
+            rigidBody.angularVelocity = 0f;
+            return;
+        }
+
+        float dir = (transform.position.x > originalPos.x) ? -1 : 1;
+
+        float xVelocity = speed * dir;
+
+        rigidBody.velocity = new Vector2(xVelocity, rigidBody.velocity.y);
     }
 
     private void PhysicsCheck() {
@@ -205,5 +238,14 @@ public class Set10Movement : MonoBehaviour {
 
         stateTimeElapse += Time.deltaTime;
         return stateTimeElapse >= duration;
+    }
+
+    public void Active(bool isActive, int sortOrder) {
+        input.isActive = isActive;
+        rigidBody.velocity = Vector2.zero;
+        rigidBody.angularVelocity = 0f;
+        sortingGroup.sortingOrder = sortOrder;
+
+        gameObject.layer = (isActive) ? defaultLayer : waterLayer;
     }
 }

@@ -20,6 +20,10 @@ public class DemoInput : MonoBehaviour {
     [HideInInspector] public float direction;
 
     private void Update() {
+
+        if (!isActive)
+            return;
+
         //Clear out existing input values
         ClearInput();
 

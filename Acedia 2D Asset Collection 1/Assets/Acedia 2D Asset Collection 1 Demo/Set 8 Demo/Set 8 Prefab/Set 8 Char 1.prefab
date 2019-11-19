@@ -1435,17 +1435,18 @@ MonoBehaviour:
   drawDebugRaycasts: 1
   speed: 8
   maxFallSpeed: -25
-  dashTime: 0.3
+  dashTime: 0.2
   dashForce: 30
   footPosition: {fileID: 2949905652454050900}
+  sortingGroup: {fileID: 2316152102406464890}
   jumpForce: 6
   jumpHoldForce: 2.5
   jumpHoldDuration: 0.15
   landingResetTime: 0.1
   leftFootOffset: 0.2
   rightFootOffset: -0.4
-  groundOffset: -1.65
-  groundDistance: 0.2
+  groundOffset: -1.69
+  groundDistance: 0.1
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -1467,7 +1468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2316152102406464883}
   input: {fileID: 2316152102406464885}
-  myRB: {fileID: 2316152102406464881}
+  rigidBody: {fileID: 2316152102406464881}
   movement: {fileID: 2316152102406464884}
 --- !u!210 &2316152102406464890
 SortingGroup:
@@ -2267,6 +2268,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2316152101519805211}
     m_Modifications:
+    - target: {fileID: 9107898426972876806, guid: 4f9513e6e4d3e924ca3425966cf1fdb2,
+        type: 3}
+      propertyPath: m_Name
+      value: AxeWeapon
+      objectReference: {fileID: 0}
     - target: {fileID: 9107898426972876805, guid: 4f9513e6e4d3e924ca3425966cf1fdb2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2321,11 +2327,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9107898426972876806, guid: 4f9513e6e4d3e924ca3425966cf1fdb2,
-        type: 3}
-      propertyPath: m_Name
-      value: AxeWeapon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f9513e6e4d3e924ca3425966cf1fdb2, type: 3}

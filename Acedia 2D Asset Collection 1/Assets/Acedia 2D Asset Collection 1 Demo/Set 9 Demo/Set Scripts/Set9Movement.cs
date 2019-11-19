@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D), typeof(DemoInput4D))]
-public class Set9Movement : MonoBehaviour {
+public class Set9Movement : MonoBehaviour, IActivatable {
 
     [Header("Movement Properties")]
     public float speed = 8f;                //Player speed
-
+    public SortingGroup sortingGroup;
     public Vector2 maxPosition;
     public Vector2 minPosition;
 
@@ -16,7 +17,9 @@ public class Set9Movement : MonoBehaviour {
     private Rigidbody2D rigidBody;                  //The rigidbody component
     private float originalXScale;                   //Original scale on X axis
     private int direction = 1;                      //Direction player is facing
-    private bool isActive;
+    private int waterLayer;
+    private int defaultLayer;
+    private Vector3 originalPos;
 
     private void Start() {
         //Get a reference to the required components
@@ -25,12 +28,17 @@ public class Set9Movement : MonoBehaviour {
 
         //Record the original x scale of the player
         originalXScale = transform.localScale.x;
-        isActive = true;
+
+        originalPos = new Vector3(transform.position.x, transform.position.y);
+        waterLayer = LayerMask.NameToLayer("Water");
+        defaultLayer = LayerMask.NameToLayer("Default");
+
+        gameObject.layer = waterLayer;
     }
 
     private void Update() {
 
-        if (!isActive) return;
+        if (!input.isActive) return;
 
         if (transform.position.x <= minPosition.x)
             SetOutOfBoundsPosition(new Vector3(minPosition.x, transform.position.y));
@@ -45,15 +53,27 @@ public class Set9Movement : MonoBehaviour {
 
     private void FixedUpdate() {
 
-        if (!isActive) return;
+        if (!input.isActive) {
+            ReturnToOriginalPosition();
+            return;
+        }
 
         //Process ground and air movements
         Movement();
     }
 
-    public void MakeInActive() {
-        isActive = false;
-        rigidBody.velocity = Vector2.zero;
+    private void ReturnToOriginalPosition() {
+
+        float remainingDistance = (transform.position - originalPos).sqrMagnitude;
+
+        if (remainingDistance <= float.Epsilon) return;
+
+        float xDir = (transform.position.x > originalPos.x) ? -1 : 1;
+
+        if (xDir * direction < 0f)
+            FlipCharacterDirection();
+
+        transform.position = Vector2.MoveTowards(transform.position, originalPos, speed * Time.fixedDeltaTime);
     }
 
     private void Movement() {
@@ -86,5 +106,14 @@ public class Set9Movement : MonoBehaviour {
 
         //Apply the new scale
         transform.localScale = scale;
+    }
+
+    public void Active(bool isActive, int sortOrder) {
+        input.isActive = isActive;
+        rigidBody.velocity = Vector2.zero;
+        rigidBody.angularVelocity = 0f;
+        sortingGroup.sortingOrder = sortOrder;
+
+        gameObject.layer = (isActive) ? defaultLayer : waterLayer;
     }
 }

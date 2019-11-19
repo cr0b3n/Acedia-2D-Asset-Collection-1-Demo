@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 5928470673343127258}
   - component: {fileID: 5928470673343127205}
   - component: {fileID: 5928470673343127204}
+  - component: {fileID: 9473561819845309}
   m_Layer: 0
   m_Name: Set 10 Char
   m_TagString: Untagged
@@ -380,6 +381,7 @@ MonoBehaviour:
   maxFallSpeed: -25
   dashTime: 0.15
   dashForce: 35
+  sortingGroup: {fileID: 9473561819845309}
   jumpForce: 10
   jumpHoldForce: 1.9
   jumpHoldDuration: 0.1
@@ -393,6 +395,17 @@ MonoBehaviour:
   isOnGround: 0
   isJumping: 0
   isDashing: 0
+--- !u!210 &9473561819845309
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5928470673343127201}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
 --- !u!1 &5928470673641320203
 GameObject:
   m_ObjectHideFlags: 0

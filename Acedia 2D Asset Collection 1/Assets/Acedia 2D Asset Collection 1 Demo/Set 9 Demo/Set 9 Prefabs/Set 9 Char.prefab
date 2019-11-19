@@ -5137,6 +5137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: 0
   vertical: 0
+  attackPressed: 0
   isActive: 0
 --- !u!114 &6630750359701718803
 MonoBehaviour:
@@ -5151,6 +5152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  sortingGroup: {fileID: 8507098502080707511}
   maxPosition: {x: 7.37, y: 4.2}
   minPosition: {x: -7.37, y: -2.7}
 --- !u!1 &1617065084483362966
