@@ -79,13 +79,12 @@ public class Set9Movement : MonoBehaviour, IActivatable {
     private void Movement() {
 
         //Calculate the desired velocity based on inputs
-        float xVelocity = speed * input.horizontal;
-        float yVelocity = speed * input.vertical;
+        Vector2 velocity = new Vector2(input.horizontal, input.vertical).normalized * speed;
 
-        if (xVelocity * direction < 0f)
+        if (input.horizontal * direction < 0f)
             FlipCharacterDirection();
 
-        rigidBody.velocity = new Vector2(xVelocity, yVelocity);
+        rigidBody.velocity = velocity;
     }
 
     private void SetOutOfBoundsPosition(Vector3 newPos) {

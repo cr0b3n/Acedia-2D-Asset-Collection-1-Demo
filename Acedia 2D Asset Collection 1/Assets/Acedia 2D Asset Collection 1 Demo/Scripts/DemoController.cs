@@ -43,20 +43,6 @@ public class DemoController : MonoBehaviour {
 
     private void IgnoreColliderCollision() {
 
-        //List<int> intergers = new List<int>();
-
-        //for (int i = 0; i < 3; i++) {
-        //    intergers.Add(i);
-        //}
-
-        //for (int i = 0; i < intergers.Count; i++) {
-
-        //    for (int j = i + 1; j < intergers.Count; j++) {
-
-        //        Debug.Log(string.Format("{0} - {1}", intergers[i], intergers[j]));
-        //    }
-        //}
-
         if (ignoringColliders.Length <= 1) return;
 
         for (int i = 0; i < ignoringColliders.Length; i++) {

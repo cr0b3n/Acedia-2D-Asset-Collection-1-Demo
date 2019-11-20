@@ -275,6 +275,8 @@ MonoBehaviour:
   sortingGroup: {fileID: 8351622104604211413}
   maxPosition: {x: 4.78, y: 1.95}
   minPosition: {x: -6.42, y: -2.76}
+  ammoSpawnPosition: {fileID: 7876058936992940049}
+  ammo: {fileID: 5552402204317526730, guid: 26c2dbb3124915f48b99e68fc746ac6d, type: 3}
 --- !u!114 &8907255051894353249
 MonoBehaviour:
   m_ObjectHideFlags: 0

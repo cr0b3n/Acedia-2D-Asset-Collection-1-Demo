@@ -12,18 +12,22 @@ public class Set1Movement : MonoBehaviour, IActivatable {
     public SortingGroup sortingGroup;
     public Vector2 maxPosition;
     public Vector2 minPosition;
+    public Transform ammoSpawnPosition;
+    public GameObject ammo;
 
     private DemoInput4D input;                      //The current inputs for the player
     private Rigidbody2D rigidBody;                  //The rigidbody component
     private int waterLayer;
     private int defaultLayer;
     private Vector3 originalPos;
+    private bool canAttack;
 
     private void Start() {
         //Get a reference to the required components
         input = GetComponent<DemoInput4D>();
         rigidBody = GetComponent<Rigidbody2D>();
 
+        canAttack = true;
         originalPos = new Vector3(transform.position.x, transform.position.y);
         waterLayer = LayerMask.NameToLayer("Water");
         defaultLayer = LayerMask.NameToLayer("Default");
@@ -67,20 +71,24 @@ public class Set1Movement : MonoBehaviour, IActivatable {
     }
 
     public void ReleaseAttack() {
-        Debug.Log("Releasing Attack!");
+
+        if (!canAttack) return;
+
+        GameObject obj = Instantiate(ammo, ammoSpawnPosition.position, Quaternion.identity);
+        Destroy(obj, 2f);
+
     }
 
     public void AttackComplete() {
-        Debug.Log("Attack Complete!");
+        canAttack = true;
     }
 
     private void Movement() {
 
         //Calculate the desired velocity based on inputs
-        float xVelocity = speed * input.horizontal;
-        float yVelocity = speed * input.vertical;
+        Vector2 velocity = new Vector2(input.horizontal, input.vertical).normalized * speed;
 
-        rigidBody.velocity = new Vector2(xVelocity, yVelocity);
+        rigidBody.velocity = velocity;
     }
 
     private void SetOutOfBoundsPosition(Vector3 newPos) {
