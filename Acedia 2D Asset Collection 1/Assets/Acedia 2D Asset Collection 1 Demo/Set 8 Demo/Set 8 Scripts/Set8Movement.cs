@@ -40,9 +40,13 @@ public class Set8Movement : MonoBehaviour, IActivatable {
     private float originalXScale;                   //Original scale on X axis
     private int direction = 1;                      //Direction player is facing
     private float stateTimeElapse;
+    private bool hasDashEffect;
     private int waterLayer;
     private int defaultLayer;
     private Vector3 originalPos;
+    private bool isFalling;
+    private const float fallEffectRate = .5f;
+    private float fallEffectTimer;
 
     [HideInInspector] public bool isAttacking;
     [HideInInspector] public bool isDashing;
@@ -130,6 +134,9 @@ public class Set8Movement : MonoBehaviour, IActivatable {
         //If either ray hit the ground, the player is on the ground
         if (leftCheck || rightCheck)
             isOnGround = true;
+
+        if (!isOnGround && input.isActive)
+            isFalling = true;
     }
 
     private void GroundMovement() {
@@ -149,6 +156,7 @@ public class Set8Movement : MonoBehaviour, IActivatable {
     }
 
     private void ResetDash() {
+        hasDashEffect = false;
         stateTimeElapse = 0f;
         isDashing = false;
         rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
@@ -171,6 +179,12 @@ public class Set8Movement : MonoBehaviour, IActivatable {
         if (!input.dashPressed) return;
 
         if (!isOnGround && !isDashing) return;
+
+        if (!hasDashEffect) {
+            //DO EFFECTS AND AUDIO
+            DemoController.instance.ShowEffect(transform.position, new Vector3(input.direction * -1f, 1f, 1f), EffectType.Dash);
+            hasDashEffect = true;
+        }
 
         //Calculate the desired velocity based on inputs
         float xVelocity = speed * input.direction;
@@ -196,6 +210,7 @@ public class Set8Movement : MonoBehaviour, IActivatable {
 
     public void FootStep() {
         //This method is use by run animation
+        DemoController.instance.ShowEffect(footPosition.position, Vector3.one, EffectType.Step);
     }
 
     private void MidAirMovement() {
@@ -214,6 +229,8 @@ public class Set8Movement : MonoBehaviour, IActivatable {
 
             //...add the jump force to the rigidbody...
             rigidBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+
+            JumpEffect();
         }
         //Otherwise, if currently within the jump time window...
         else if (isJumping) {
@@ -229,6 +246,23 @@ public class Set8Movement : MonoBehaviour, IActivatable {
         //If player is falling too fast, reduce the Y velocity to the max
         if (rigidBody.velocity.y < maxFallSpeed)
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, maxFallSpeed);
+
+        if (isOnGround && isFalling) {
+            isFalling = false;
+
+            if (fallEffectTimer < Time.time) {
+                fallEffectTimer = Time.time + fallEffectRate;
+                LandEffect();
+            }
+        }
+    }
+
+    private void JumpEffect() {
+        DemoController.instance.ShowEffect(footPosition.position, Vector3.one, EffectType.Jump);
+    }
+
+    private void LandEffect() {
+        DemoController.instance.ShowEffect(footPosition.position, Vector3.one, EffectType.Land);
     }
 
     private void FlipCharacterDirection() {

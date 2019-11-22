@@ -102,7 +102,7 @@ public class Set10Movement : MonoBehaviour, IActivatable {
     private void PhysicsCheck() {
         //Start by assuming the player isn't on the ground and the head isn't blocked
         isOnGround = false;
-
+        
         //Cast rays for the left and right foot
         RaycastHit2D leftCheck = Raycast(new Vector2(leftFootOffset, groundOffset), Vector2.down, groundDistance);
         RaycastHit2D rightCheck = Raycast(new Vector2(rightFootOffset, groundOffset), Vector2.down, groundDistance);
@@ -149,10 +149,10 @@ public class Set10Movement : MonoBehaviour, IActivatable {
 
         if (!hasDashEffect) {
             //DO EFFECTS AND AUDIO
- 
+            DemoController.instance.ShowEffect(transform.position, new Vector3(input.direction * -1f, 1f, 1f), EffectType.Dash);
+            hasDashEffect = true;
         }
-
-        hasDashEffect = true;
+   
         isDashing = true;
         rigidBody.velocity = new Vector2(dashForce * input.direction, rigidBody.velocity.y);
     }
@@ -173,7 +173,6 @@ public class Set10Movement : MonoBehaviour, IActivatable {
             rigidBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
 
             JumpEffect();
-
         }
         //Otherwise, if currently within the jump time window...
         else if (isJumping) {
@@ -198,12 +197,17 @@ public class Set10Movement : MonoBehaviour, IActivatable {
 
             if (fallEffectTimer < Time.time) {
                 fallEffectTimer = Time.time + fallEffectRate;
+                LandEffect();
             }
         }
     }
 
-    private void JumpEffect() {
+    private void JumpEffect() {     
+        DemoController.instance.ShowEffect(new Vector3(transform.position.x, transform.position.y + groundOffset), Vector3.one, EffectType.Jump);
+    }
 
+    private void LandEffect() {
+        DemoController.instance.ShowEffect(new Vector3(transform.position.x, transform.position.y + groundOffset), Vector3.one, EffectType.Land);
     }
 
     //These two Raycast methods wrap the Physics2D.Raycast() and provide some extra

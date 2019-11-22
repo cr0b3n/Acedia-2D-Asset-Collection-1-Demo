@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -23,6 +24,7 @@ public class DemoController : MonoBehaviour {
 
     public bool enableCharacterSelection;
     public Collider2D[] ignoringColliders;
+    public DemoEffectSO[] effects;
 
 
     public event Action OnAppearanceButtonClick;
@@ -39,6 +41,17 @@ public class DemoController : MonoBehaviour {
     private void Update() {
 
         CheckActivePlayer();
+    }
+
+    public void ShowEffect(Vector3 pos, Vector3 localScale, EffectType type) {
+
+        if (effects.Length <= 0) return;
+
+        DemoEffectSO effect = effects.FirstOrDefault(x => x.type == type);
+
+        if (effect == null) return;
+
+        effect.Show(pos, localScale);
     }
 
     private void IgnoreColliderCollision() {
@@ -71,7 +84,7 @@ public class DemoController : MonoBehaviour {
 
             IActivatable activatable = hits[i].collider.GetComponent<IActivatable>();
 
-            if(activatable != null) {
+            if (activatable != null) {
 
                 curActivatable?.Active(false, 1);
                 activatable.Active(true, 10);
@@ -84,4 +97,5 @@ public class DemoController : MonoBehaviour {
     public void ChangeAppearance() {
         OnAppearanceButtonClick?.Invoke();
     }
+
 }

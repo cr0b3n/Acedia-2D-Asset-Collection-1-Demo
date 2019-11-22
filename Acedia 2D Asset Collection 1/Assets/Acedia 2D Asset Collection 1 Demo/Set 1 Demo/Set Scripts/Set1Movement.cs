@@ -74,6 +74,7 @@ public class Set1Movement : MonoBehaviour, IActivatable {
 
         if (!canAttack) return;
 
+        DemoController.instance.ShowEffect(ammoSpawnPosition.position, Vector3.one, EffectType.Shoot);
         GameObject obj = Instantiate(ammo, ammoSpawnPosition.position, Quaternion.identity);
         Destroy(obj, 2f);
 

@@ -705,8 +705,12 @@ MonoBehaviour:
   ignoringColliders:
   - {fileID: 1051711086}
   - {fileID: 1135415826}
-  - {fileID: 0}
-  - {fileID: 0}
+  effects:
+  - {fileID: 11400000, guid: e9a100ed47954704788737e593068f54, type: 2}
+  - {fileID: 11400000, guid: 91439226e120eb14688451166cead2a2, type: 2}
+  - {fileID: 11400000, guid: b7c16e2c9c0184c458de07ec670c916b, type: 2}
+  - {fileID: 11400000, guid: 72ca9b01e36aa6d43b8c1d8a904fed26, type: 2}
+  - {fileID: 11400000, guid: 24e76e69a2ad25c45b2d35dc4f055087, type: 2}
 --- !u!1 &749744752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1658,7 +1662,7 @@ PrefabInstance:
     - target: {fileID: 2316152102406464882, guid: f3e76e76180cf394e8562831a545734b,
         type: 3}
       propertyPath: m_Name
-      value: Set 8 Char 1
+      value: Set 8 Char
       objectReference: {fileID: 0}
     - target: {fileID: 2316152102406464880, guid: f3e76e76180cf394e8562831a545734b,
         type: 3}
