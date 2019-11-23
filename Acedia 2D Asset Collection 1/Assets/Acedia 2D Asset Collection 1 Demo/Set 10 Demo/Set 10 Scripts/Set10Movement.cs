@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D), typeof(DemoInput))]
-public class Set10Movement : MonoBehaviour, IActivatable {
+public class Set10Movement : MonoBehaviour, ICharActivatable {
     public bool drawDebugRaycasts = true;   //Should the environment checks be visualized
 
     [Header("Movement Properties")]
@@ -46,6 +46,8 @@ public class Set10Movement : MonoBehaviour, IActivatable {
     private int waterLayer;
     private int defaultLayer;
     private Vector3 originalPos;
+
+    public CharacterSet CharSet { get => CharacterSet.Set10; }
 
     private void Start() {
         //Get a reference to the required components

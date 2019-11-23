@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 
 [DisallowMultipleComponent]
-public class Set8Movement : MonoBehaviour, IActivatable {
+public class Set8Movement : MonoBehaviour, ICharActivatable {
 
     public bool drawDebugRaycasts = true;   //Should the environment checks be visualized
 
@@ -50,6 +50,8 @@ public class Set8Movement : MonoBehaviour, IActivatable {
 
     [HideInInspector] public bool isAttacking;
     [HideInInspector] public bool isDashing;
+
+    public CharacterSet CharSet { get => CharacterSet.Set8; }
 
     public event Action<bool> OnAttack;
 
@@ -323,6 +325,7 @@ public class Set8Movement : MonoBehaviour, IActivatable {
         rigidBody.velocity = Vector2.zero;
         rigidBody.angularVelocity = 0f;
         sortingGroup.sortingOrder = sortOrder;
+        isDashing = false;
 
         gameObject.layer = (isActive) ? defaultLayer : waterLayer;
     }

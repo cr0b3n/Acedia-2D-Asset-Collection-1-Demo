@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D), typeof(DemoInput4D))]
-public class Set1Movement : MonoBehaviour, IActivatable {
+public class Set1Movement : MonoBehaviour, ICharActivatable {
 
     [Header("Movement Properties")]
     public float speed = 8f;                //Player speed
@@ -21,6 +21,8 @@ public class Set1Movement : MonoBehaviour, IActivatable {
     private int defaultLayer;
     private Vector3 originalPos;
     private bool canAttack;
+
+    public CharacterSet CharSet { get => CharacterSet.Set1; }
 
     private void Start() {
         //Get a reference to the required components

@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Rigidbody2D), typeof(DemoInput4D))]
-public class Set9Movement : MonoBehaviour, IActivatable {
+public class Set9Movement : MonoBehaviour, ICharActivatable {
 
     [Header("Movement Properties")]
     public float speed = 8f;                //Player speed
@@ -20,6 +20,8 @@ public class Set9Movement : MonoBehaviour, IActivatable {
     private int waterLayer;
     private int defaultLayer;
     private Vector3 originalPos;
+
+    public CharacterSet CharSet { get => CharacterSet.Set9; }
 
     private void Start() {
         //Get a reference to the required components

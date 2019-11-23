@@ -25,13 +25,13 @@ public class DemoController : MonoBehaviour {
     public bool enableCharacterSelection;
     public Collider2D[] ignoringColliders;
     public DemoEffectSO[] effects;
-
+    public CharGuide[] uiControlGuides;
 
     public event Action OnAppearanceButtonClick;
 
     private RaycastHit2D[] hits = new RaycastHit2D[7];
     private Camera cam;
-    private IActivatable curActivatable;
+    private ICharActivatable curActivatable;
 
     private void Start() {
         cam = Camera.main;
@@ -41,6 +41,23 @@ public class DemoController : MonoBehaviour {
     private void Update() {
 
         CheckActivePlayer();
+    }
+
+    [Serializable]
+    public class CharGuide {
+        public CharacterSet charSet;
+        public GameObject guide;
+    }
+
+    public void ShowGuideUI(CharacterSet charSet, bool isEnable) {
+
+        if (uiControlGuides.Length <= 0) return;
+
+        CharGuide charGuide = uiControlGuides.FirstOrDefault(x => x.charSet == charSet);
+
+        if (charGuide == null) return;
+
+        charGuide.guide.SetActive(isEnable);
     }
 
     public void ShowEffect(Vector3 pos, Vector3 localScale, EffectType type) {
@@ -82,12 +99,18 @@ public class DemoController : MonoBehaviour {
 
         for (int i = 0; i < hitCount; i++) {
 
-            IActivatable activatable = hits[i].collider.GetComponent<IActivatable>();
+            ICharActivatable activatable = hits[i].collider.GetComponent<ICharActivatable>();
 
             if (activatable != null) {
 
-                curActivatable?.Active(false, 1);
+                if(curActivatable != null) {
+
+                    curActivatable?.Active(false, 1);
+                    ShowGuideUI(curActivatable.CharSet, false);
+                }
+
                 activatable.Active(true, 10);
+                ShowGuideUI(activatable.CharSet, true);
                 curActivatable = activatable;
                 return;
             }
@@ -98,4 +121,12 @@ public class DemoController : MonoBehaviour {
         OnAppearanceButtonClick?.Invoke();
     }
 
+}
+
+public enum CharacterSet {
+    Set1,
+    Set7,
+    Set8,
+    Set9,
+    Set10
 }
