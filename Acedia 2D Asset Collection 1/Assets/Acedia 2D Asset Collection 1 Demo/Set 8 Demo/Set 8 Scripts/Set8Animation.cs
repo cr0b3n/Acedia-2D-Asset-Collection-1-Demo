@@ -36,7 +36,7 @@ public class Set8Animation : MonoBehaviour {
         animator.SetBool(isLandingAnimID, movement.isOnGround);
         animator.SetFloat(yVelocityAnimID, rigidBody.velocity.y);        
         animator.SetBool(isJumpingAnimID, movement.isJumping);
-        
+
         animator.SetFloat(speedAnimID, Mathf.Abs(rigidBody.velocity.x));
     }
 }
