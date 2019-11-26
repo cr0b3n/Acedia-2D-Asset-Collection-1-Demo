@@ -1443,8 +1443,8 @@ MonoBehaviour:
   jumpHoldForce: 2.5
   jumpHoldDuration: 0.15
   landingResetTime: 0.1
-  leftFootOffset: 0.2
-  rightFootOffset: -0.4
+  leftFootOffset: -0.4
+  rightFootOffset: 0.2
   groundOffset: -1.69
   groundDistance: 0.1
   groundLayer:

@@ -21,7 +21,6 @@ public class Set8Movement : MonoBehaviour, ICharActivatable {
     public float jumpForce = 6.3f;          //Initial force of jump
     public float jumpHoldForce = 1.9f;      //Incremental force when jump is held
     public float jumpHoldDuration = .1f;    //How long the jump key can be held
-    public float landingResetTime = 0.1f;
 
     [Header("Environment Check Properties")]
     public float leftFootOffset = .4f;      //X Offset of feet raycast
