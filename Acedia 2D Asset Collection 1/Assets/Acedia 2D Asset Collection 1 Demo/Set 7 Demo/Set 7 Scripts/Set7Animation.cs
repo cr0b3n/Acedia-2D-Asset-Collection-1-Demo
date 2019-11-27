@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [DisallowMultipleComponent]
 public class Set7Animation : MonoBehaviour {
@@ -12,9 +10,8 @@ public class Set7Animation : MonoBehaviour {
 
     private int speedAnimID;
     private int isJumpingAnimID;
-    private int isLandingAnimID;
+    private int isGrounded;
     private int yVelocityAnimID;
-    private int attackAnimID;
     private int isDashingID;
     private int isDead;
 
@@ -22,20 +19,18 @@ public class Set7Animation : MonoBehaviour {
         //Set up animation int ID cause they are faster than strings
         speedAnimID = Animator.StringToHash("speed");
         isJumpingAnimID = Animator.StringToHash("isJumping");
-        isLandingAnimID = Animator.StringToHash("isLanding");
+        isGrounded = Animator.StringToHash("onGround");
         yVelocityAnimID = Animator.StringToHash("yVelocity");
-        attackAnimID = Animator.StringToHash("attack");
         isDashingID = Animator.StringToHash("isDashing");
         isDead = Animator.StringToHash("isDead");
     }
 
     private void Update() {
 
-        //animator.SetBool(attackAnimID, movement.isAttacking);
-        //animator.SetBool(isDashingID, movement.isDashing);
-        //animator.SetBool(isLandingAnimID, movement.isOnGround);
-        //animator.SetFloat(yVelocityAnimID, rigidBody.velocity.y);
-        //animator.SetBool(isJumpingAnimID, movement.isJumping);
+        animator.SetBool(isDashingID, movement.isDashing);
+        animator.SetBool(isGrounded, movement.isOnGround);
+        animator.SetFloat(yVelocityAnimID, rigidBody.velocity.y);
+        animator.SetBool(isJumpingAnimID, movement.isJumping);
 
         animator.SetFloat(speedAnimID, Mathf.Abs(rigidBody.velocity.x));
     }
