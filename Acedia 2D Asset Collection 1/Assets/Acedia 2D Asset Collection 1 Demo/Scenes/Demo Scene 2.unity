@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 4202476620332575610, guid: 0d7d7d9cfe3b48b42b1951623dadd9bd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4202476620332575610, guid: 0d7d7d9cfe3b48b42b1951623dadd9bd,
         type: 3}
@@ -187,11 +187,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4202476620332575610, guid: 0d7d7d9cfe3b48b42b1951623dadd9bd,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d7d7d9cfe3b48b42b1951623dadd9bd, type: 3}
@@ -513,7 +508,7 @@ GameObject:
   - component: {fileID: 583204835}
   - component: {fileID: 583204834}
   m_Layer: 5
-  m_Name: RandColorBtn
+  m_Name: ChangeFeatures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1247,12 +1242,12 @@ PrefabInstance:
     - target: {fileID: 1617065084427455619, guid: ccd443e71c0f76d44aaa5cfbfc495ae9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.44
+      value: 2.63
       objectReference: {fileID: 0}
     - target: {fileID: 1617065084427455619, guid: ccd443e71c0f76d44aaa5cfbfc495ae9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.44
+      value: 2.35
       objectReference: {fileID: 0}
     - target: {fileID: 1617065084427455619, guid: ccd443e71c0f76d44aaa5cfbfc495ae9,
         type: 3}
@@ -1757,7 +1752,7 @@ PrefabInstance:
     - target: {fileID: 2316152102406464880, guid: f3e76e76180cf394e8562831a545734b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.56
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 2316152102406464880, guid: f3e76e76180cf394e8562831a545734b,
         type: 3}
@@ -2051,7 +2046,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Random Color
+  m_Text: Change Features
 --- !u!222 &1743777982
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2620,12 +2615,12 @@ PrefabInstance:
     - target: {fileID: 5928470673343127207, guid: ffca9391a73e25d4fa997be7b989414c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.64
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 5928470673343127207, guid: ffca9391a73e25d4fa997be7b989414c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.71
+      value: -1.94
       objectReference: {fileID: 0}
     - target: {fileID: 5928470673343127207, guid: ffca9391a73e25d4fa997be7b989414c,
         type: 3}

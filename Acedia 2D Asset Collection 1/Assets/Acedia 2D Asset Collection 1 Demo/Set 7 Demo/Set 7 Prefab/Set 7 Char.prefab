@@ -1457,6 +1457,7 @@ GameObject:
   - component: {fileID: 1789201015159741771}
   - component: {fileID: 4555715391249158448}
   - component: {fileID: 1210027573757901608}
+  - component: {fileID: 758263270511978028}
   m_Layer: 0
   m_Name: Set 7 Char
   m_TagString: Untagged
@@ -1591,15 +1592,15 @@ MonoBehaviour:
   drawDebugRaycasts: 1
   speed: 8
   maxFallSpeed: -25
-  dashTime: 0.1
-  dashForce: 50
+  dashTime: 0.2
+  dashForce: 30
   footPosition: {fileID: 321658408756890028}
   sortingGroup: {fileID: 4202476620332575607}
   jumpForce: 6.3
   jumpHoldForce: 2
   jumpHoldDuration: 0.15
   leftFootOffset: -0.27
-  rightFootOffset: 0.32
+  rightFootOffset: 0.28
   groundOffset: 0
   groundDistance: 0.05
   groundLayer:
@@ -1625,6 +1626,26 @@ MonoBehaviour:
   input: {fileID: 1789201015159741771}
   rigidBody: {fileID: 4202476620332575613}
   movement: {fileID: 4555715391249158448}
+--- !u!114 &758263270511978028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4202476620332575614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3492f07b2a18f74488bbde423c31d3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appearances:
+  - renderers:
+    - {fileID: 4202476619560461457}
+    - {fileID: 4202476618526906370}
+    - {fileID: 4202476620321751656}
+    - {fileID: 4202476619153368195}
+    - {fileID: 4202476619339841142}
+    appearance: {fileID: 11400000, guid: 83268b70c1b458243ba97cb6a082540d, type: 2}
 --- !u!1 &4202476620332733419
 GameObject:
   m_ObjectHideFlags: 0
