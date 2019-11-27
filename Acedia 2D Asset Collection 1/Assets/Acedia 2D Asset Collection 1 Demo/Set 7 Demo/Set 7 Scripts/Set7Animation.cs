@@ -29,14 +29,14 @@ public class Set7Animation : MonoBehaviour {
         isDead = Animator.StringToHash("isDead");
     }
 
-    //private void Update() {
+    private void Update() {
 
-    //    animator.SetBool(attackAnimID, movement.isAttacking);
-    //    animator.SetBool(isDashingID, movement.isDashing);
-    //    animator.SetBool(isLandingAnimID, movement.isOnGround);
-    //    animator.SetFloat(yVelocityAnimID, rigidBody.velocity.y);
-    //    animator.SetBool(isJumpingAnimID, movement.isJumping);
+        //animator.SetBool(attackAnimID, movement.isAttacking);
+        //animator.SetBool(isDashingID, movement.isDashing);
+        //animator.SetBool(isLandingAnimID, movement.isOnGround);
+        //animator.SetFloat(yVelocityAnimID, rigidBody.velocity.y);
+        //animator.SetBool(isJumpingAnimID, movement.isJumping);
 
-    //    animator.SetFloat(speedAnimID, Mathf.Abs(rigidBody.velocity.x));
-    //}
+        animator.SetFloat(speedAnimID, Mathf.Abs(rigidBody.velocity.x));
+    }
 }
