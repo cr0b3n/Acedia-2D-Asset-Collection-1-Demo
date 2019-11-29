@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d363a445482f14f8aa12fce6169444, type: 3}
   m_Name: Vertical Horizontal Movement
   m_EditorClassIdentifier: 
-  minXPosition: -7
-  maxXPosition: 7
+  minXPosition: -8.3
+  maxXPosition: 8.3
   minYPosition: -1.2
-  maxYPosition: 4
+  maxYPosition: 5

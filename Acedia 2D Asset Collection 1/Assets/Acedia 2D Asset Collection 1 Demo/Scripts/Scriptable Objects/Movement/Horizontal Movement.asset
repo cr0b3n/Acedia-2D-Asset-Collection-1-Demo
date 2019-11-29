@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cab25be647bac46b3667d7ba2a4a20, type: 3}
   m_Name: Horizontal Movement
   m_EditorClassIdentifier: 
-  minXPosition: -7
-  maxXPosition: 7
+  minXPosition: -8.3
+  maxXPosition: 8.3
