@@ -440,7 +440,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -405539212965888768, guid: 2d5273f255898bf4e8870beb6b6f29d8,
+  m_Sprite: {fileID: -2058226634486451076, guid: 2d5273f255898bf4e8870beb6b6f29d8,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1442,7 +1442,6 @@ MonoBehaviour:
   jumpForce: 6
   jumpHoldForce: 2.5
   jumpHoldDuration: 0.15
-  landingResetTime: 0.1
   leftFootOffset: -0.4
   rightFootOffset: 0.2
   groundOffset: -1.69
@@ -1516,6 +1515,9 @@ MonoBehaviour:
     - {fileID: 2316152102590385453}
     - {fileID: 2316152101676375550}
     appearance: {fileID: 11400000, guid: 83268b70c1b458243ba97cb6a082540d, type: 2}
+  - renderers:
+    - {fileID: 2316152101554569910}
+    appearance: {fileID: 11400000, guid: a2e201b24b1bef84a96ab33e95915eb3, type: 2}
 --- !u!1 &2316152102496231502
 GameObject:
   m_ObjectHideFlags: 0
