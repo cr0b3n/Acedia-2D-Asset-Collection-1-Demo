@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/BuildHelper/Hidden Build Feature.unity
+    guid: 41c853ff742895c408a04bfc61fd7b05
+  - enabled: 1
+    path: Assets/Acedia 2D Asset Collection 1 Demo/Scenes/Demo Scene 1.unity
+    guid: 21df7571c9c0e5f4ca2443a2d988ba46
+  - enabled: 1
+    path: Assets/Acedia 2D Asset Collection 1 Demo/Scenes/Demo Scene 2.unity
+    guid: 83c064fe0400a9647a4356f05e7df7c1
   m_configObjects: {}
